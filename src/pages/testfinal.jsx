@@ -4,12 +4,16 @@ import DButton from "../components/DButton";
 import venturelab from "../assets/venturelab.png";
 import nasscom from "../assets/nasscom.png";
 import integral from "../assets/integral.png";
-import vector from "../assets/new.svg";
+
 import mobiledemo from "../assets/mobiledemo.png";
+import group9 from "../assets/group9.png";
+
 import guidedemo from "../assets/guidedemo.png";
 import securedemo from "../assets/securedemo.png";
 import instantdemo from "../assets/instantdemo.png";
-import pointer from "../assets/pointer.svg";
+
+
+
 import { useState, useEffect, useRef } from "react";
 import { gsap } from "gsap";
 
@@ -111,7 +115,7 @@ useEffect(() => {
           <p className="text-5xl max-w-[641.57px] font-semibold">
             Turn your everyday local ride into a SmartSavaari!
           </p>
-          <p className="my-2  max-w-[530px] leading-5 text-base text-[#575757]">
+          <p className="mt-2 mb-4  max-w-[530px] leading-5 text-base text-[#575757]">
             SmartSavaari revolutionizes daily commutes with real-time bus and
             metro tracking, cashless ticketing, and seamless route planning. Say
             goodbye to long waits and missed connections.
@@ -135,7 +139,7 @@ useEffect(() => {
             <div className="circle1 absolute bg-[#001376] rounded-full w-[719.65px] h-[719.65px] z-10"></div>
             <div className="circle2 absolute bg-[#2E3B80] rounded-full w-[931px] h-[931px] z-0"></div>
           </div>
-
+            {/* <img className="h-[931px] w-[931px] absolute top-0 right-0 z-[-4]"src={group9}/> */}
 
           <div className="aspect-w-[603px] pl-5 aspect-h-[561px] max-w-full overflow-hidden">
             <img
