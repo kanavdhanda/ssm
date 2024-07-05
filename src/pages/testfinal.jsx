@@ -6,7 +6,6 @@ import nasscom from "../assets/nasscom.png";
 import integral from "../assets/integral.png";
 
 import mobiledemo from "../assets/mobiledemo.png";
-import group9 from "../assets/group9.png";
 
 import guidedemo from "../assets/guidedemo.png";
 import securedemo from "../assets/securedemo.png";
@@ -227,7 +226,7 @@ useEffect(() => {
       <div className="flex items-center justify-center w-full bg-[#2E3B80] semi-bold h-[84px] text-white text-center text-5xl">
         <span>Partners</span>
       </div>
-      <div className="flex justify-evenly my-40 ">
+      <div className="flex justify-evenly my-40 pr-20">
         <img src={venturelab} alt="Venture Labs" className="h-24 w-auto" />
         <img src={nasscom} alt="Nasscom" className="h-24 w-auto" />
         <img src={integral} alt="Integral" className="h-24 w-auto" />
