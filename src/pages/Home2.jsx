@@ -250,7 +250,7 @@ useEffect(() => {
       <div className="flex items-center justify-center w-full bg-[#2E3B80] semi-bold h-[84px] text-white text-center text-5xl">
         <span>Partners</span>
       </div>
-      <div className="flex justify-evenly my-40 pr-16">
+      <div className="flex justify-evenly my-40 pr-1">
         <img src={venturelab} alt="Venture Labs" className="h-24 w-auto" />
         <img src={nasscom} alt="Nasscom" className="h-24 w-auto" />
         <img src={integral} alt="Integral" className="h-24 w-auto" />
