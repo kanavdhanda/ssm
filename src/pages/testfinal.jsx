@@ -16,7 +16,7 @@ import instantdemo from "../assets/instantdemo.png";
 import { useState, useEffect, useRef } from "react";
 import { gsap } from "gsap";
 
-
+import './home.css'
 
 export default function Home() {
   const [screenSize, setScreenSize] = useState({
@@ -219,7 +219,7 @@ useEffect(() => {
       <div className="flex items-center justify-center w-full bg-[#2E3B80] semi-bold h-[84px] text-white text-center text-5xl">
         <span>Partners</span>
       </div>
-      <div className="flex justify-evenly my-40 pr-20">
+      <div className="flex justify-evenly my-40 pr-16">
         <img src={venturelab} alt="Venture Labs" className="h-24 w-auto" />
         <img src={nasscom} alt="Nasscom" className="h-24 w-auto" />
         <img src={integral} alt="Integral" className="h-24 w-auto" />

@@ -82,16 +82,16 @@ import googlePlayBadge from "../assets/google-play-badge.png"; // Assume this is
 
 export default function Footer() {
   return (
-    <footer className="relative w-full text-white pb-5">
+    <footer className="relative w-full text-white h-full text-2xl">
 
-      <p className="absolute z-[-1] top-[-83px] flex items-start p-4 justify-center font-bold text-[40px] bg-[#2E3B80] w-full h-[166px] rounded-t-[83px]">Now In Delhi NCR !</p>
+      <p className="absolute z-[-1] top-[-83px] flex items-start pt-7 p-4 justify-center font-bold text-[40px] bg-[#2E3B80] w-full h-[166px] rounded-t-[83px]">Now In Delhi NCR !</p>
 
 
       <div className="rounded-t-[84px]  bg-[#001376]">
-      <div className="flex flex-col md:flex-row justify-evenly items-center h-[340px]">
+      <div className="flex flex-col md:flex-row justify-between items-center h-[340px]">
         <div className="flex flex-col items-start mb-4 md:mb-0">
           <div className="flex items-center mb-2">
-            <FaPhoneAlt className="mr-2" /> +91(522)7968306
+            <FaPhoneAlt className="mr-2 h-12" /> +91(522)7968306
           </div>
           <div className="flex items-center mb-2">
             <FaEnvelope className="mr-2" />
@@ -121,7 +121,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaInstagram size="24" />
+              <FaInstagram className="h-12 w-auto" />
             </a>
             <a
               href="https://in.linkedin.com/company/smartsavaarimobility"
@@ -129,7 +129,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaLinkedin size="24" />
+              <FaLinkedin className="h-12 w-auto" />
             </a>
             <a
               href="https://www.facebook.com/people/SmartSavaari-Mobility/61556520880316/"
@@ -137,14 +137,14 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaFacebookF size="24" />
+              <FaFacebookF className="h-12 w-auto" />
             </a>
           </div>
           <div className="flex flex-col items-center">
             <img
               src={googlePlayBadge}
               alt="Get it on Google Play"
-              className="w-36 mb-2"
+              className="w-42 mb-2"
             />
             <p>Copyrights 2024 @ SmartSavaari Mobility Pvt Ltd</p>
           </div>
