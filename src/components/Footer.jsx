@@ -1,8 +1,15 @@
 import { FaInstagram, FaLinkedin, FaFacebookF } from "react-icons/fa";
-
+import { useEffect } from "react";
 import googlePlayBadge from "../assets/google-play-badge.png";
 
 export default function Footer() {
+  useEffect(() => {
+    document.body.style.overflowX = "hidden";
+
+    return () => {
+      document.body.style.overflowX = "";
+    };
+  }, []);
   return (
     <footer className="relative w-full text-white text-base bg-[#001376] rounded-t-[84px] p-12">
       <p
@@ -29,7 +36,7 @@ export default function Footer() {
               />
             </svg>
 
-            <span>+91(522)7968306</span>
+            <span>+91 (522)7968306</span>
           </div>
           <div className="flex items-center mb-4">
             <svg
