@@ -11,6 +11,7 @@ import instantdemo from "../assets/instantdemo.png";
 import { useState, useEffect, useRef } from "react";
 import { gsap } from "gsap";
 
+
 export default function Home() {
   const [circleSizes, setCircleSizes] = useState({
     circle1: 719.65,
@@ -28,37 +29,32 @@ export default function Home() {
       circle1: 719.65 * scaleFactor,
       circle2: 931 * scaleFactor,
       demo: Math.max(523.33 * scaleFactor, 523.33),
-      // demo: 523.33*scaleFactor,
+
 
       imagedemo: Math.max(Math.min(539 * scaleFactor, 539),250),
     });
   };
 
-  // window.addEventListener("resize", updateCircleSizes);
-  // return () => window.removeEventListener("resize", updateCircleSizes);
-
-  // useEffect(() => {
-  //   const handleResize = () => {
-  //     setScreenSize({
-  //       width: window.innerWidth,
-  //       height: window.innerHeight,
-  //     });
-  //   };
-
-  // }, []);
+  
   useEffect(() => {
+    
+    
+  
     const handleResize = () => {
       updateCircleSizes();
     };
-
+  
     window.addEventListener("resize", handleResize);
     document.body.style.overflowX = "hidden";
-
+  
     return () => {
       window.removeEventListener("resize", handleResize);
       document.body.style.overflowX = "";
     };
   }, []);
+useEffect(()=>{
+  updateCircleSizes();
+},[])
 
   const [activeDemo, setActiveDemo] = useState(null);
   const overlayRef = useRef(null);
@@ -100,9 +96,6 @@ export default function Home() {
       hideAll();
     }
   }, [activeDemo]);
-  useEffect(() => {
-    console.log(circleSizes.imagedemo);
-  }, [circleSizes]);
 
   return (
     <>
@@ -162,7 +155,7 @@ export default function Home() {
             <img
               src={mobiledemo}
               alt="mobiledemo"
-              className={`pr-6`}
+              className={`pr-6 pl-4`}
               style={{ width: `${circleSizes.demo}px` }}
             />
           </div>
@@ -184,7 +177,7 @@ export default function Home() {
                 ref={guideRef}
                 src={guidedemo}
                 alt="Guide demo of SmartSavaari"
-                className="absolute opacity-0 pointer-events-none m-5 top-[50vh] left-[25vw] lg:top-[500px] lg:left-[200px]"
+                className="absolute opacity-0 pointer-events-none m-5 top-[25%] left-[25%] lg:top-[500px] lg:left-[200px]"
                 style={{
                   width: `${circleSizes.imagedemo}px`,
                 }}
@@ -202,7 +195,7 @@ export default function Home() {
                 ref={instantRef}
                 src={instantdemo}
                 alt="Instant demo of SmartSavaari"
-                className="absolute opacity-0 bottom-[100px] left-[40vw] lg:bottom-[200px] lg:right-[400px] pointer-events-none m-5"
+                className="absolute opacity-0 bottom-[100px] left-[25vw] lg:bottom-[200px] lg:right-[400px] pointer-events-none m-5"
                 style={{
                   width: `${circleSizes.imagedemo}px`,
                 }}

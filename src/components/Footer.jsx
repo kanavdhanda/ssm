@@ -1,24 +1,20 @@
 import { FaInstagram, FaLinkedin, FaFacebookF } from "react-icons/fa";
-import { useEffect } from "react";
+
 import googlePlayBadge from "../assets/google-play-badge.png";
-
+import './footer.css'
 export default function Footer() {
-  useEffect(() => {
-    document.body.style.overflowX = "hidden";
-
-    return () => {
-      document.body.style.overflowX = "";
-    };
-  }, []);
+  
   return (
-    <footer className="relative w-full text-white text-base bg-[#001376] rounded-t-[84px] p-12">
+    <>
+    <footer className="relative text-white text-base bg-[#001376] rounded-t-[84px] p-12"
+    >
+      
       <p
-        className="absolute z-[-1] top-[-80px] left-[-22px] flex items-start pt-6  justify-center font-bold text-3xl md:text-4xl bg-[#2E3B80] h-[166px]  rounded-t-[83px]"
-        style={{ width: `calc(100% + 44px)` }}
+        className="absolute help  z-[-1] top-[-80px] left-[-22px] flex items-start pt-6 justify-center font-bold text-3xl md:text-4xl bg-[#2E3B80] h-[166px]  rounded-t-[83px]"
+        style={{ width: "calc(100% + 44px)" }}
       >
-        Now In Delhi NCR !
-      </p>
-
+        Now In Delhi NCR!
+      </p> 
       <div className="flex flex-col md:flex-row justify-between items-center py-8 px-4 md:px-12">
         <div className="flex flex-col items-start mb-8 md:mb-0">
           <div className="flex items-center mb-4">
@@ -126,5 +122,8 @@ export default function Footer() {
         </div>
       </div>
     </footer>
+
+
+    </>
   );
 }

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import logo from '../assets/logo.svg';
 import name from '../assets/name.svg';
@@ -27,11 +27,13 @@ export default function Navbar() {
         <meta name="keywords" content="SmartSavaari, daily commute, real-time tracking, cashless ticketing, route planning" />
         <meta name="robots" content="index, follow" />
       </Helmet>
-      <nav className="flex items-center justify-between p-4 md:p-6 shadow-md gap-2 md:gap-4 lg:gap-10">
+      <navbar className="flex items-center justify-between p-4 md:p-6 shadow-md gap-2 md:gap-4 lg:gap-10">
+        <Link to="/">
         <div className="flex items-center">
-          <img src={logo} alt="SmartSavaari Logo" className="h-12 md:h-16 lg:h-24" />
+          <img src={logo} alt="SmartSavaari Logo" className="h-16 md:h-24" />
           {isScreenLarge && <img src={name} alt="SmartSavaari" className="h-12 md:h-16 lg:h-20 ml-2" />}
         </div>
+        </Link>
         <div className="flex gap-2 md:gap-4 items-center">
           <NavLink
             to="/"
@@ -61,7 +63,7 @@ export default function Navbar() {
             <DButton />
           </div>
         </div>
-      </nav>
+      </navbar>
     </>
   );
 }
