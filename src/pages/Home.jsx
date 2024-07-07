@@ -30,7 +30,7 @@ export default function Home() {
       demo: Math.max(523.33 * scaleFactor, 523.33),
       // demo: 523.33*scaleFactor,
 
-      imagedemo: Math.min(539 * scaleFactor, 539),
+      imagedemo: Math.max(Math.min(539 * scaleFactor, 539),250),
     });
   };
 
