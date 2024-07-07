@@ -15,6 +15,9 @@ import { useState, useEffect, useRef } from "react";
 import { gsap } from "gsap";
 
 export default function Home() {
+  
+  
+
   const [circleSizes, setCircleSizes] = useState({
     circle1: 719.65,
     circle2: 931,
@@ -37,12 +40,40 @@ export default function Home() {
       imagedemo: Math.min(539 * scaleFactor, 539)
     });
   };
+ 
+  // window.addEventListener("resize", updateCircleSizes);
+  // return () => window.removeEventListener("resize", updateCircleSizes);
 
+  // useEffect(() => {
+  //   const handleResize = () => {
+  //     setScreenSize({
+  //       width: window.innerWidth,
+  //       height: window.innerHeight,
+  //     });
+  //   };
+    
+    
+  // }, []);
   useEffect(() => {
-    updateCircleSizes();
-    window.addEventListener("resize", updateCircleSizes);
-    return () => window.removeEventListener("resize", updateCircleSizes);
+
+
+  
+
+    const handleResize = () => {
+      updateCircleSizes(); 
+    };
+  
+
+    window.addEventListener("resize", handleResize);
+    document.body.style.overflowX = "hidden"; 
+  
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      document.body.style.overflowX = ""; 
+    };
   }, []);
+
 
   const [activeDemo, setActiveDemo] = useState(null);
   const overlayRef = useRef(null);
@@ -84,11 +115,7 @@ export default function Home() {
       hideAll();
     }
   }, [activeDemo]);
-
-  useEffect(() => {
-    console.log(circleSizes.demo);
-  },[circleSizes]);
-
+  
   return (
     <>
       <Helmet>
@@ -320,7 +347,7 @@ export default function Home() {
           <img
             src={integral}
             alt="Integral"
-            className="h-16 md:h-24 w-auto object-contain"
+            className="h-16 md:h-24 w-auto object-contain mb-10"
           />
         </section>
       </main>
