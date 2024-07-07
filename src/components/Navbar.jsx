@@ -155,7 +155,7 @@ export default function Navbar() {
           >
             Contact
           </NavLink>
-          <div className="ml-2">
+          <div className="ml-2 hidden md:block">
             <DButton />
           </div>
         </div>
