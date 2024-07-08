@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import Navbar from './components/Navbar';
 import Pnf from './pages/404';
-import Footer from './components/Footer';
+
 function App() {
 //   useEffect(() => {
   
@@ -26,7 +26,6 @@ function App() {
 
 
       </Routes>
-      <Footer />
 
     </Router>
   );

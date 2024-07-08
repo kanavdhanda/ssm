@@ -1,6 +1,10 @@
 import { Helmet } from "react-helmet";
+import { useState, useEffect, useRef } from "react";
+import { gsap } from "gsap";
 
 import DButton from "../components/DButton";
+import Footer from "../components/Footer";
+
 import venturelab from "../assets/venturelab.png";
 import nasscom from "../assets/nasscom.png";
 import integral from "../assets/integral.png";
@@ -8,8 +12,7 @@ import mobiledemo from "../assets/mobiledemo.png";
 import guidedemo from "../assets/guidedemo.png";
 import securedemo from "../assets/securedemo.png";
 import instantdemo from "../assets/instantdemo.png";
-import { useState, useEffect, useRef } from "react";
-import { gsap } from "gsap";
+
 
 
 export default function Home() {
@@ -395,6 +398,7 @@ useEffect(()=>{
           />
         </section>
       </main>
+      <Footer />
     </>
   );
 }
